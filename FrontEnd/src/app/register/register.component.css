@@ -1,0 +1,8 @@
+.rowInput{
+  display: flex;
+  padding: 8px 10px;
+}
+
+.label{
+    width: 100px;
+}
