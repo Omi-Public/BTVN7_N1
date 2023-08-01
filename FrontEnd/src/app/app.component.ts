@@ -11,7 +11,7 @@ export class AppComponent {
   constructor(){ }
 
   title = 'Bài tập buổi 6';
-  loginOn: boolean = false;
+  loginOn: boolean = true;
   registerOn: boolean = false;
   dashboardOn: boolean = false;
 

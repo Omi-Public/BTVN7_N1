@@ -1,3 +1,17 @@
+.login{
+    width: 350px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px 10px;
+    margin: auto;
+}
+
+.popup-title{
+    text-align: center;
+    font-size: 25px;
+}
+
 .rowInput{
     display: flex;
     padding: 8px 10px;
@@ -5,4 +19,17 @@
 
 .label{
     width: 100px;
+}
+
+.rowButton{
+    padding: 8px 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.rowButton button {
+    padding: 4px 12px;
+    background-color: blue;
+    color: white;
+    border-radius: 4px;
 }
