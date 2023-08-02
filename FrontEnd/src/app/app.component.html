@@ -1,3 +1,3 @@
-<app-login *ngIf="loginOn"></app-login>
+<app-login *ngIf="loginOn" (goToDashboard)="goToDashboardPage()"></app-login>
 <app-dashboard *ngIf="dashboardOn"></app-dashboard>
 <app-register *ngIf="registerOn"></app-register>

@@ -1,5 +1,6 @@
 <div class="login">
     <p class="popup-title"><b>Login</b></p>
+    <div class="notifyLogin" *ngIf="resultLogin">{{resultLogin}}</div>
     <div class="rowInput">
         <div class="label"><label for="username" style="width: 200px;">Username: </label></div>
         <input type="text" [(ngModel)]="username">

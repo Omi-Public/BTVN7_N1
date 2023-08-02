@@ -5,11 +5,13 @@
     border-radius: 10px;
     padding: 15px 10px;
     margin: auto;
+    font-family: sans-serif;
+    font-size: 14px;
 }
 
 .popup-title{
     text-align: center;
-    font-size: 25px;
+    font-size: 25px !important;
 }
 
 .rowInput{
@@ -32,4 +34,10 @@
     background-color: blue;
     color: white;
     border-radius: 4px;
+}
+
+.notifyLogin{
+    text-align: center;
+    margin: 10px 0px;
+    color: red;
 }

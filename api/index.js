@@ -40,7 +40,6 @@ app.get('/products', authenToken, async function (req, res){
 app.get('/login', async function (req, res){
   const username = req.query.username;
   const password = md5(req.query.password);
-  console.log(password);
 
   let payload = {username: username}
   
