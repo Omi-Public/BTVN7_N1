@@ -15,6 +15,9 @@ app.get('/', function (req, res) {
 /** Middleware authen token */
 function authenToken(req, res, next){
   const authorizationHeader = req.headers['authorization'];
+  if (!authorizationHeader) 
+    res.sendStatus(403);
+
   const token = authorizationHeader.split(' ')[1];
   if (!token){
     res.sendStatus(401);
@@ -28,9 +31,9 @@ function authenToken(req, res, next){
 
 /** GET user information by username and password */
 app.get('/products', authenToken, async function (req, res){
-  connection.query('SELECT * FROM tbl_product WHERE', [], function (error, results, fields) {
+  connection.query('SELECT * FROM tbl_products;', [], function (error, results, fields) {
     if (results && results.length > 0)
-      res.json(result);
+      res.json(results);
     else
       res.json([]);
   })
