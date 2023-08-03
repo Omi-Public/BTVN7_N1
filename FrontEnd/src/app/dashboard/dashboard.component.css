@@ -30,11 +30,19 @@
 }
 
 .product-category {
-    padding: 0 10vw;
+    width: 80%;
+    margin: auto;
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 40px;
     text-transform: capitalize;
+}
+
+.product-list{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .product-container {
@@ -50,9 +58,9 @@
 
 .product-card {
     flex: 0 0 auto;
-    width: 250px;
-    height: 450px;
-    margin-right: 40px;
+    width: 20%;
+    height: auto;
+    padding: 10px;
 }
 
 .product-image {

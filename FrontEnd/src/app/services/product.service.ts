@@ -15,9 +15,7 @@ export class ProductService {
   getProducts(): Observable<any> {
     const accessToken = window.localStorage.getItem("accessToken");
     const url = this.apiUrl + "/products";
-    let headersAPI = new HttpHeaders();
-    headersAPI.append('Content-Type', "application/json");
-    headersAPI.append('Authorization', "Bearer " + accessToken);
+    let headersAPI = new HttpHeaders({'Content-Type': 'application/json', 'Authorization': 'Bearer ' + accessToken??''});
     return this.http.get(url, { headers: headersAPI });
   }
 }

@@ -27,4 +27,9 @@ export class DashboardComponent {
       console.log("Have an error");
     })
   }
+
+  calDiscountPrice(price: number, discount: number){
+    const actualPrice = price - ((discount/100) * price);
+    return actualPrice;
+  }
 }
