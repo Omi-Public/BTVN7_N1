@@ -1,5 +1,11 @@
 ## BTVN7_N1_Document
 
+### Main functions
+1. User login with username password, returns token as jwt type
+2. Homepage display product lists including their name and price tags. Ultilize token jwt above, if token is valid then go to (Home) page, invalid token returns user to Login page.
+3. If user don't already had an account, signup. Password is saved to DB under md5 encoding type.
+4. DB Migration has user table and product table. Seeder also created to insert data into product table with at least 10 products with the status to be: 'available', 'out of stock'
+
 ### The process for which user logins into the product homepage
 
 1. Login 
