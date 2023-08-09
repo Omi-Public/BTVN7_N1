@@ -31,7 +31,7 @@ function authenToken(req, res, next){
 
 /** GET user information by username and password */
 app.get('/products', authenToken, async function (req, res){
-  connection.query('SELECT * FROM tbl_products;', [], function (error, results, fields) {
+  connection.query('SELECT * FROM products;', [], function (error, results, fields) {
     if (results && results.length > 0)
       res.json(results);
     else
@@ -46,7 +46,7 @@ app.get('/login', async function (req, res){
 
   let payload = {username: username}
   
-  connection.query('SELECT * FROM tbl_user WHERE username=? AND password=?',[username, password], function (error, results, fields) {
+  connection.query('SELECT * FROM users WHERE username=? AND password=?',[username, password], function (error, results, fields) {
     // return Json Web Token if found user
     if (results && results.length > 0) {
       const accessToken = jwt.sign(payload, SECRETE_KEY, { expiresIn: '3600s' })
@@ -70,7 +70,7 @@ app.post('/register', authenToken, async function (req, res){
   const date_of_birth = req.query.date_of_birth;
   
   console.log(req.query);
-  connection.query('INSERT INTO tbl_user(`username`, `password`, `age`, `country`, `date_of_birth`) values(?, ?, ?, ?, ?)',
+  connection.query('INSERT INTO users(`username`, `password`, `age`, `country`, `date_of_birth`) values(?, ?, ?, ?, ?)',
     [username, password, age, country, date_of_birth],
     function (error, results, fields) {
       res.send(results);

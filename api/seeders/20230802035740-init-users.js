@@ -18,7 +18,9 @@ module.exports = {
         password: 'b3557725dd2843054c04e43c7eb4c840',
         age: 23,
         country: 'Ha Noi, Viet Nam',
-        date_of_birth: '2000-07-04'
+        date_of_birth: '2000-07-04',
+        updatedAt: "2023-08-08",
+        createdAt: "2023-08-08"
       }
     ], {});
   },
@@ -30,6 +32,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    return queryInterface.bulkDelete('user', null, {});
+    return queryInterface.bulkDelete('users', null, {});
   }
 };
